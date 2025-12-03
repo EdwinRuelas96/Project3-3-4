@@ -11,8 +11,16 @@ cord1 = input('Please enter the first set of coordinates as an array []:\n');
 cord2 = input('Please enter the second set of coordinates as an array []:\n');
 cord3 = input('Please enter the third set of coordinates as an array []:\n');
 
+% Get x and y values from coordinates
+x1 = cord1(1); y1 = cord1(2);
+x2 = cord2(1); y2 = cord2(2);
+x3 = cord3(1); y3 = cord3(2);
+
 %• Solve a system of equations to determine the coefficients a, b, and
 %  c for the equation for the parabola
 
-y = a*x^2 + b*x + c;
+A = [x1^2 x1 1;
+    x2^2 x2 1;
+    x3^2 x3 1];
+B = [y1;y2;y3];
 
