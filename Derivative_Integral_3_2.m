@@ -34,3 +34,13 @@ xlabel('Time(s)')
 ylabel('Velocity(m/s)')
 xlim([0 12])
 
+% Acceleration Plot
+subplot(3,1,2)
+plot(time,acc,'r-o','LineWidth',1.5)
+grid on
+title('Acceleration v Time')
+xlabel('Time(s)')
+ylabel('Acceleration(m/s^2)')
+xlim([0 12])
+
+
