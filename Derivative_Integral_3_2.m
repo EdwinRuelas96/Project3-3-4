@@ -15,3 +15,14 @@ for i = 2:length(time)-1
     acc(i) = (vel(i+1) - vel(i-1)) / (time(i+1) - time(i-1));
 end
 
+% for endpoints, use forward/backward difference
+acc(1) = (vel(2) - vel(1)) / (time(2) - time(1));
+acc(end) = (vel(2) - vel(1)) / (time(2) - time(end-1));
+
+%Compute positions by integration (trapz)
+position = zeros(size(time));
+for i =2:length(time)
+    position(i) = position(i-1) + (vel(i) + vel(i-1)) / 2*(time(i) - time(i-1));
+end
+
+
