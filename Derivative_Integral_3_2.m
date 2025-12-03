@@ -43,4 +43,13 @@ xlabel('Time(s)')
 ylabel('Acceleration(m/s^2)')
 xlim([0 12])
 
+% Position Plot
+subplot(3,1,3)
+plot(time,position,'g-o','LineWidth',1.5)
+grid on
+title('Position v Time')
+xlabel('Time(s)')
+ylabel('Position(m)')
+xlim([0 12])
+
 
