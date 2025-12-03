@@ -1,5 +1,5 @@
 %Create a script that will:
-% Determine the position function by integrating the function up to each value of time shown.
+
 % Create three separate plots: acceleration, velocity, and position.
 % -All graphs should
 %show time values from 0 to 12 seconds
@@ -9,3 +9,9 @@
 time = 0:1:12;
 vel = [0 1 1.8 2.4 2.6 2.7 2.6 2.2 2 1.9 1.8 1.8 1.8];
 % Determine the acceleration function by using the central difference estimation of the derivative.
+acc = zeros(size(vel));
+% use for loop for the position function by integrating the function up to each value of time shown.
+for i = 2:length(time)-1
+    acc(i) = (vel(i+1) - vel(i-1)) / (time(i+1) - time(i-1));
+end
+
