@@ -1,7 +1,7 @@
 %Create a script that will:
 
 %Create time and velocity arrays
-time = 0:1:12;
+time = 0:12;
 vel = [0 1 1.8 2.4 2.6 2.7 2.6 2.2 2 1.9 1.8 1.8 1.8];
 % Determine the acceleration function by using the central difference estimation of the derivative.
 acc = zeros(size(vel));
@@ -12,7 +12,7 @@ end
 
 % for endpoints, use forward/backward difference
 acc(1) = (vel(2) - vel(1)) / (time(2) - time(1));
-acc(end) = (vel(2) - vel(1)) / (time(2) - time(end-1));
+acc(end) = (vel(end) - vel(end-1)) / (time(end) - time(end-1));
 
 %Compute positions by integration (trapz)
 position = zeros(size(time));
