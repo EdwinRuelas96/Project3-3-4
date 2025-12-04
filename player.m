@@ -40,3 +40,12 @@ function obj = player(name, team, hits, walks, atbats)
                 pct = (obj.hits + obj.walks) / denominator;
             end
         end
+
+        % Display method
+        function displayStats(obj)
+            fprintf("Average: %.3f\n", obj.battingAvg);
+            fprintf("On Base Percentage: %.3f\n", obj.onBasePct);
+        end
+    end
+end
+
