@@ -25,3 +25,14 @@ for p = battingAbove300
     p.displayStats();
     fprintf("\n");
 end
+
+% output for on-base percentage
+fprintf("The players with an on-base percentage higher than 0.350 are:\n");
+
+for p = onbaseAbove350
+    fprintf("%s:\n", p.name);
+    fprintf("Team: %s\n", p.team);
+    fprintf("Average: %.3f\n", p.battingAvg);
+    fprintf("On Base Percentage: %.3f\n\n", p.onBasePct);
+end
+
